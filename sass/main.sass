@@ -1,0 +1,439 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+body
+	background-color: #0d4984
+	background-position: center
+	background-size: cover
+	background-repeat: repeat
+
+.logo 
+	font-size: 55px
+	line-height: 1.1
+	color: #ffffff
+
+.search
+	width: 95%
+	input[type="search"]
+		width: 90%
+		height: 30px
+		margin-top: $gutter
+		padding: 20px
+		border-radius: 20px
+		position: relative
+
+.widgets
+	margin-top: 20px
+
+.come-in
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: #E6E6EA
+	border-radius: 22px
+	border-style: none
+	box-shadow: 0 1px 12px 0 rgba(25,25,34,.12)
+	height: 30px
+	width: 30px
+	cursor: pointer
+	transition: all 0.25s ease
+	&:hover
+		background-color: #4A4A4A
+	i
+		color: #FF9F1C
+		font-size: 16px
+
+// Tags
+
+.tags
+	margin-top: $gutter
+
+.tag
+	margin-right: 15px
+	border-bottom: 1px dashed
+	line-height: 1.9
+	color: #a6a6a6
+	transition: color 0.25s ease
+	text-decoration: none
+	&:hover
+		color: $accent 
+		text-decoration: none
+
+.main-title
+	font-weight: bold
+	font-size: 24px
+	margin-top: $gutter/2
+	color: #ffffff
+
+// Add-panel
+
+.add-film, .add-series
+	display: flex
+	justify-content: space-around
+	flex-wrap: wrap
+
+.photo-flag-point, .name-date-time-tag
+	display: flex
+	flex-direction: column
+	align-items: center		
+	position: relative
+
+#film-photo-input, #series-photo-input
+	width: 1px
+	height: 1px
+	margin: -1px
+	border: 0
+	padding: 0
+	white-space: nowrap
+	-webkit-clip-path: inset(100%)
+	clip-path: inset(100%)
+	clip: rect(0 0 0 0)
+	overflow: hidden
+
+#film-image, #series-image
+	position: absolute
+
+.photo-drop-zone, .series-drop-zone
+	position: relative
+	height: 215px
+	width: 150px
+	padding: 10px 10px 5px
+	text-align: center
+	font-size: 14px
+	color: #ffffff
+	border: dashed 1px #c7c7c7
+	border-radius: 5px
+	cursor: pointer
+
+.box select
+	background-color: transparent
+	color: #ffffff
+	padding: 2.5px 10px 2.5px 20px
+	width: 150px
+	margin-bottom: 10px
+	border-radius: 5px
+	border: dashed 1px #ffffff
+	-webkit-appearance: button
+	appearance: button
+	outline: none
+
+.box .lg
+	background-color: transparent
+	color: #ffffff
+	padding: 2.5px 10px 2.5px 20px
+	width: 380px
+	margin-bottom: 10px
+	border-radius: 5px
+	border: dashed 1px #ffffff
+	-webkit-appearance: button
+	appearance: button
+	outline: none
+
+// .box::before
+// 	content: "\f13a"
+// 	font-family: FontAwesome
+// 	position: absolute
+// 	right: 0
+// 	width: 20%
+// 	height: auto
+// 	text-align: center
+// 	font-size: 24px
+// 	line-height: 35px
+// 	color: rgba(255, 255, 255, 0.5)
+// 	pointer-events: none
+
+// .box:hover::before 
+//   color: rgba(255, 255, 255, 0.6)
+
+option
+	color: #999999
+
+.film-name, .series-name, .film-description-input, .series-description-input
+	padding:
+		top: 2.5px
+		bottom: 2.5px
+		left: 20px
+		right: 10px	
+	border-radius: 5px
+	margin-bottom: 10px
+	width: 100%
+	background-color: transparent
+	border: dashed 1px #ffffff
+	color: #ffffff
+
+.film-description-input, .series-description-input
+	height: 76px	
+
+input[type="text"]::-webkit-input-placeholder 
+	color: #ffffff
+	
+input[type="text"]:-moz-placeholder  /* Firefox 18- */
+	color: #ffffff !important  
+
+input[type="text"]::-moz-placeholder   /* Firefox 19+ */
+	color: #ffffff !important  
+
+input[type="text"]:-ms-input-placeholder   
+	color: #ffffff !important 
+
+textarea::-webkit-input-placeholder 
+	color: #ffffff !important
+
+textarea:-moz-placeholder  /* Firefox 18- */
+	color: #ffffff	 !important  
+
+textarea::-moz-placeholder   /* Firefox 19+ */
+	color: #ffffff !important  
+
+textarea:-ms-input-placeholder  
+	color: #ffffff !important  
+
+.film-buttons, .series-buttons
+	width: 100%
+	display: flex
+	justify-content: space-between		
+	align-items: center	
+
+.add-button
+	width: 45%
+	background-image: linear-gradient( 107deg,  rgba(13,198,180,1) 8.1%, rgba(33,198,138,1) 79.5% )
+	border: none
+	border-radius: 20px	
+	padding: 5px
+	color: #ffffff
+	cursor: pointer
+
+.reset-button
+	width: 45%
+	background-image: radial-gradient( circle 870px at 12.5% 27.5%,  rgba(92,149,220,1) 36.2%, rgba(65,131,215,1) 72.8% )
+	border: none
+	border-radius: 20px	
+	padding: 5px
+	color: #ffffff		
+	cursor: pointer	
+
+// Sorting-panel
+
+.info
+	margin-top: $gutter	
+
+.info-text, .info-text-search
+	color: $accent	
+
+.sorting
+	margin-top: $gutter
+	&-form
+		display: flex
+		flex-direction: row
+		justify-content: space-around
+		align-items: center
+		flex-wrap: wrap
+		position: relative
+		padding-bottom: $gutter/2	
+
+.box 
+	text-align: center
+
+.box .sorting
+	background-color: transparent
+	color: #ffffff
+	padding: 2.5px 10px 2.5px 20px
+	width: 250px
+	margin-bottom: 10px
+	border-radius: 5px
+	border: dashed 1px #ffffff
+	-webkit-appearance: button
+	appearance: button
+	outline: none	
+
+// Main
+
+.film-serials
+	margin-bottom: $gutter
+
+.films
+	padding-bottom: $gutter	
+
+.film, .serial
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	margin-top: $gutter
+
+.poster
+	width: 150px
+	height: 215px
+	background-size: cover
+	background-position: center
+	img
+		display: block
+		width: 100%
+		height: 100%	
+
+.flag
+	height: 24px
+	width: 24px	
+	
+.film-info
+	padding-left: $gutter
+	color: #fff
+
+.film-title
+	font-size: 22px
+	line-height: 1.5
+	margin: 0
+	margin-top: -6px
+	padding-bottom: 10px
+	
+.film-description
+	font-size: 14px	
+	font-weight: 500
+	line-height: 1.4
+	margin: 0
+	padding-bottom: 17px
+
+.date, .time
+	display: inline-block
+
+.date
+	font-weight: bold	
+	
+.time
+	padding-left: 10px
+
+.film-flag-point
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	img
+		margin-right: 10px	
+
+.fa-star
+	color: gold
+	padding-top: 5px
+	padding-right: 5px
+
+.point
+	font-weight: bold	
+	color: #ffffff
+
+// Footer 
+
+footer
+	padding: 25px 0 35px
+	p
+		color: rgba(#fff, .2)
+		font-size: 12px
+		margin-top: 5px
+		
+.footer-copy
+		color: rgba(#fff, .45)
+		font-size: 14px
+
+// Authorization page
+
+.paralax
+	position: relative
+	display: flex
+	align-items: center
+	height: 100vh
+	overflow: hidden		
+
+.paralax-bg
+	position: absolute
+	z-index: -1
+	width: 110%
+	height: 110%
+	background-image: url(../img/bg/1.jpg)
+	background-position: center
+	background-size: cover		
+
+.authorization-form
+	height: 100vh
+	width: 100vw
+	display: flex
+	justify-content: center
+	align-items: center
+
+.authorization
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center	
+	background-color: rgba(255, 255, 255, .5)
+	border-radius: 5px
+	padding: 30px
+
+.authorization-title
+	margin: 0
+	padding: 0
+	padding: 20px 0
+	color: #000000
+
+.login, .password
+	margin: 10px 0
+	border-radius: 3px
+	border-style: none
+	padding-left: 10px
+	box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.75)
+
+.login:focus, .password:focus
+	border: 1px solid #FFB100	
+
+.authorization-buttons
+	padding: 10px 0	
+	width: 100%
+	display: flex
+	justify-content: space-between
+
+.viewing, .submit	
+	border-style: none
+	border-radius: 3px
+	color: #ffffff
+	cursor: pointer
+	width: 48%
+	box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.75)
+
+.viewing
+	background-image: radial-gradient( circle farthest-corner at 12.3% 19.3%,  rgba(85,88,218,1) 0%, rgba(95,209,249,1) 100.2% )
+
+.submit
+	background-image: linear-gradient( 107deg,  rgba(13,198,180,1) 8.1%, rgba(33,198,138,1) 79.5% )	
+
+@import "media" // Always at the end
